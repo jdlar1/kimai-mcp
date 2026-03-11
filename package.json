@@ -26,6 +26,14 @@
   ],
   "author": "jdlar",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdlar1/kimai-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jdlar1/kimai-mcp/issues"
+  },
+  "homepage": "https://github.com/jdlar1/kimai-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "axios": "^1.9.0",
