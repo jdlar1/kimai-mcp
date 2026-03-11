@@ -1,5 +1,5 @@
 {
-  "name": "kimai-mcp",
+  "name": "@jdlar/kimai-mcp",
   "version": "1.0.0",
   "description": "MCP server for Kimai time-tracking — expose your Kimai instance as Model Context Protocol tools",
   "type": "module",
