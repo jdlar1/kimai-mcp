@@ -1,4 +1,4 @@
-# @jdlar/kimai-mcp
+# kimai-mcp
 
 MCP (Model Context Protocol) server for [Kimai](https://www.kimai.org/) time-tracking. Exposes your Kimai instance as **44 tools** that any MCP-compatible AI client can use — Claude Desktop, OpenCode, Cursor, etc.
 
@@ -12,13 +12,13 @@ MCP (Model Context Protocol) server for [Kimai](https://www.kimai.org/) time-tra
 
 ### Option 1: NPX (Recommended - No Installation Required)
 ```bash
-KIMAI_API_URL=https://your-kimai.example.com KIMAI_API_TOKEN=your-token npx @jdlar/kimai-mcp
+KIMAI_API_URL=https://your-kimai.example.com KIMAI_API_TOKEN=your-token npx kimai-mcp
 ```
 
 ### Option 2: Global Installation
 ```bash
 # 1. Install globally
-npm install -g @jdlar/kimai-mcp
+npm install -g kimai-mcp
 
 # 2. Set environment variables and run
 KIMAI_API_URL=https://your-kimai.example.com KIMAI_API_TOKEN=your-token kimai-mcp
@@ -31,7 +31,7 @@ echo "KIMAI_API_URL=https://your-kimai.example.com" > .env
 echo "KIMAI_API_TOKEN=your-token" >> .env
 
 # Run with npx
-npx @jdlar/kimai-mcp
+npx kimai-mcp
 
 # Or run with global installation
 kimai-mcp
@@ -53,7 +53,7 @@ Add to your Claude Desktop config file:
   "mcpServers": {
     "kimai": {
       "command": "npx",
-      "args": ["-y", "@jdlar/kimai-mcp"],
+      "args": ["-y", "kimai-mcp"],
       "env": {
         "KIMAI_API_URL": "https://your-kimai.example.com",
         "KIMAI_API_TOKEN": "your-api-token-here"
@@ -87,7 +87,7 @@ Add to your `opencode.json`:
   "mcp": {
     "kimai": {
       "type": "local",
-      "command": ["npx", "-y", "@jdlar/kimai-mcp"],
+      "command": ["npx", "-y", "kimai-mcp"],
       "env": {
         "KIMAI_API_URL": "https://your-kimai.example.com",
         "KIMAI_API_TOKEN": "your-api-token-here"
@@ -106,7 +106,7 @@ Add to `.cursor/mcp.json` in your project root:
   "mcpServers": {
     "kimai": {
       "command": "npx",
-      "args": ["-y", "@jdlar/kimai-mcp"],
+      "args": ["-y", "kimai-mcp"],
       "env": {
         "KIMAI_API_URL": "https://your-kimai.example.com",
         "KIMAI_API_TOKEN": "your-api-token-here"
@@ -121,7 +121,7 @@ Add to `.cursor/mcp.json` in your project root:
 For any MCP-compatible client, configure:
 
 - **Command**: `npx` (or `kimai-mcp` if installed globally)
-- **Args**: `["-y", "@jdlar/kimai-mcp"]` (only when using npx)
+- **Args**: `["-y", "kimai-mcp"]` (only when using npx)
 - **Transport**: stdio
 - **Environment variables**:
   - `KIMAI_API_URL` — Your Kimai instance URL (without trailing slash)
